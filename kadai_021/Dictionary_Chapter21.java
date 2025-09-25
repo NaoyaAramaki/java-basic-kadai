@@ -1,5 +1,6 @@
 package kadai.kadai_021;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Dictionary_Chapter21 {
@@ -18,8 +19,16 @@ public class Dictionary_Chapter21 {
 		
 	}
 	
-	public HashMap<String, String> getDict() {
-		return this.dict;
+	public void referer(ArrayList<String> words) {		
+		for(int i = 0; i < words.size(); i++) {
+			String meaning = this.dict.get(words.get(i));
+			if(meaning == null) {
+				meaning = "は辞書に存在しません";
+			} else {
+				meaning = "の意味は" + meaning;
+			}
+			System.out.println(words.get(i) +  meaning);
+		}
 	}
 	
 

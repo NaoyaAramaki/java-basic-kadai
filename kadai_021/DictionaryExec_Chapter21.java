@@ -13,16 +13,7 @@ public class DictionaryExec_Chapter21 {
 		words.add("grape");
 		words.add("orange");
 		
-		for(int i = 0; i < words.size(); i++) {
-			String meaning = dict.getDict().get(words.get(i));
-			if(meaning == null) {
-				meaning = "は辞書に存在しません";
-			} else {
-				meaning = "の意味は" + meaning;
-			}
-			System.out.println(words.get(i) +  meaning);
-		}
-
+		dict.referer(words);
 	}
 
 }
